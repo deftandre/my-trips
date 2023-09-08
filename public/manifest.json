@@ -1,0 +1,21 @@
+{
+  "name": "NextJs",
+  "short_name": "My Trips",
+  "icons": [
+    {
+      "src": "/img/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#06092B",
+  "description": "Made withTypescript, React, NextJS e Styled Components",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#06092B"
+}
