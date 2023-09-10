@@ -1,6 +1,9 @@
+const esModules = ['@react-leaflet', 'react-leaflet'].join('|')
+
 module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  transformIgnorePatterns: [`/node_modules/(?!${esModules})`],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
