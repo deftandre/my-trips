@@ -1,6 +1,18 @@
 import { render, screen } from '@testing-library/react'
 import Map from '.'
 
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '',
+      push: jest.fn(() => {})
+    }
+  }
+}))
+
 describe('<Map />', () => {
   it('should render without any marker', () => {
     render(<Map />)
@@ -15,8 +27,8 @@ describe('<Map />', () => {
   it('should render with the marker in correct place', () => {
     const place = {
       id: '1',
-      name: 'Petrópolis',
-      slug: 'petropolis',
+      name: 'Itu',
+      slug: 'itu',
       location: {
         latitude: 0,
         longitude: 0
@@ -35,7 +47,7 @@ describe('<Map />', () => {
 
     render(<Map places={[place, placeTwo]} />)
 
-    expect(screen.getByTitle(/petrópolis/i)).toBeInTheDocument()
+    expect(screen.getByTitle(/itu/i)).toBeInTheDocument()
     expect(screen.getByTitle(/reykjavik/i)).toBeInTheDocument()
   })
 })

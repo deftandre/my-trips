@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import NextTopLoader from 'nextjs-toploader'
 
 import StyledComponentsRegistry from '@/lib/registry'
 import { Providers } from './providers'
@@ -27,7 +28,10 @@ export default function RootLayout({
       </head>
       <body>
         <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
+          <Providers>
+            <NextTopLoader color="#a112a1" />
+            {children}
+          </Providers>
         </StyledComponentsRegistry>
       </body>
     </html>

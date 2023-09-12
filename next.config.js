@@ -6,4 +6,8 @@ const withPWA = require('next-pwa')({
   disable: !isProd
 })
 
-module.exports = withPWA({})
+module.exports = withPWA({
+  images: {
+    domains: ['media.graphassets.com']
+  }
+})

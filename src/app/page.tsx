@@ -1,18 +1,16 @@
-'use client'
-import LinkWrapper from '@/components/LinkWrapper'
-import { InfoOutline } from '@styled-icons/evaicons-outline/InfoOutline'
+import client from '@/graphql/client'
+import HomeTemplate from './templates/Home'
+import { GET_PLACES } from '@/graphql/queries'
+import { GetPlacesQuery } from '@/graphql/generated/graphql'
 
-import dynamic from 'next/dynamic'
+const getPlaces = async () => {
+  const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
 
-const Map = dynamic(() => import('@/components/Map'), { ssr: false })
+  return places
+}
 
-export default function Home() {
-  return (
-    <>
-      <LinkWrapper href="/about">
-        <InfoOutline size={32} aria-label="About" />
-      </LinkWrapper>
-      <Map />
-    </>
-  )
+export default async function Home() {
+  const places = await getPlaces()
+
+  return <HomeTemplate places={places} />
 }
