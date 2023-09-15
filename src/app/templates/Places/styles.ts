@@ -23,6 +23,7 @@ export const Body = styled.div`
 
 export const Gallery = styled.div`
   display: grid;
+  justify-content: center;
   grid-gap: var(--medium);
   img {
     background: #f6f7f8;

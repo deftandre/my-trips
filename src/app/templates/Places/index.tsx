@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useMediaQuery } from 'react-responsive'
 
 import LinkWrapper from '@/components/LinkWrapper'
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline'
@@ -29,6 +30,7 @@ export type PlacesTemplateProps = {
 }
 
 export default function PlacesTemplate({ place }: PlacesTemplateProps) {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   return (
     <>
       <LinkWrapper href="/">
@@ -49,8 +51,8 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
                 key={`photo-${index}`}
                 src={image.url}
                 alt={place.name}
-                width={1000}
-                height={600}
+                width={isMobile ? 330 : 1000}
+                height={isMobile ? 198 : 600}
                 quality={75}
               />
             ))}
