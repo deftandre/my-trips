@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   description:
     'A simple project to show in a map the places that I went and show more information and photos when clicked.',
   openGraph: {
-    url: 'https://my-trips.deftandre.com.br',
+    url: 'https://my-trips-deftandre.vercel.app',
     title: 'My Trips',
     description:
       'A simple project to show in a map the places that I went and show more information and photos when clicked.',
     images: [
       {
-        url: 'https://my-trips.deftandre.com.br/img/cover.png',
+        url: 'https://my-trips-deftandre.vercel.app/img/cover.png',
         width: 1280,
         height: 720,
         alt: 'My Trips'

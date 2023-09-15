@@ -41,7 +41,7 @@ export async function generateMetadata({
       place.description?.text ||
       'A simple project to show in a map the places that I went and show more information and photos when clicked.',
     openGraph: {
-      url: 'https://my-trips.deftandre.com.br',
+      url: 'https://my-trips-deftandre.vercel.app',
       title: `${place.name} - My Trips`,
       description:
         place.description?.text ||

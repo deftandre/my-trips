@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://my-trips.deftandre.com.br',
+    url: 'https://my-trips-deftandre.vercel.app',
     siteName: 'My Trips'
   }
 }
