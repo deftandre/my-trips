@@ -6,8 +6,15 @@ import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'My Trips',
-  description: 'Made with nextjs',
-  themeColor: '#06092B'
+  description:
+    'A simple website to show pinned places that you went or you want to go',
+  themeColor: '#030518',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://my-trips.deftandre.com.br',
+    siteName: 'My Trips'
+  }
 }
 
 export default function RootLayout({

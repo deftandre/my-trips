@@ -20,6 +20,7 @@ export type PlacesTemplateProps = {
     description?:
       | {
           html: string
+          text: string
         }
       | null
       | undefined

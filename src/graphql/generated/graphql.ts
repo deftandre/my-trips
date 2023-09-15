@@ -4395,7 +4395,7 @@ export type GetPlaceBySlugQuery = {
     slug: string
     name: string
     location: { __typename?: 'Location'; latitude: number; longitude: number }
-    description?: { __typename?: 'RichText'; html: string } | null
+    description?: { __typename?: 'RichText'; html: string; text: string } | null
     gallery: Array<{
       __typename?: 'Asset'
       url: string
