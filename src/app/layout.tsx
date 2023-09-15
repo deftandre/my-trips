@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import NextTopLoader from 'nextjs-toploader'
 
+import Analytics from '@/components/Analytics'
 import StyledComponentsRegistry from '@/lib/registry'
 import { Providers } from './providers'
 
@@ -25,6 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="gaeQbrfYyVfIr6DMyS1ViqM450PftrcPWfwNJEdiFrE"
+        />
+        <link rel="shortcut icon" href="/img/logo192.png" />
+        <link rel="apple-touch-icon" href="/img/logo192.png" />
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="stylesheet"
@@ -40,6 +47,7 @@ export default function RootLayout({
             {children}
           </Providers>
         </StyledComponentsRegistry>
+        <Analytics />
       </body>
     </html>
   )
