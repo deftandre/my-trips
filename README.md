@@ -4,7 +4,7 @@
 
 > A simple website to show pinned places that you went or you want to go
 
-Available in https://my-trips-deftandre.vercel.app/
+Available at https://my-trips-deftandre.vercel.app/
 
 ## Getting Started
 
